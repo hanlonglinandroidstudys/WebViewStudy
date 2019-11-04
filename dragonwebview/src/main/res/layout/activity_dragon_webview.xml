@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DragonWebViewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dragon_webview_toobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:title="加载中..."
+        app:navigationIcon="@drawable/web_icon_close"
+        app:titleTextColor="@android:color/white"></android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/dragon_webview_progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3px"
+        android:background="@android:color/holo_red_dark" />
+
+    <WebView
+        android:id="@+id/dragon_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>

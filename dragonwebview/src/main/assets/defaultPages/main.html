@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Android JS 通信测试</h2>
+<p><input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')"/></p>
+<p><input type="button" value="goto error" onClick="gotoError()"/></p>
+<p><input type="button" value="show alert" onClick="showAlert()"/></p>
+<script type="text/javascript">
+    function showAndroidToast(showAndroidToast) {
+        DragonWebInterface.forwardWebAction('showToast',showAndroidToast);
+        console.log("正在调试：showAndroidToast（）"+showAndroidToast);
+    }
+
+    function gotoError() {
+        DragonWebInterface.forwardWebAction('navigateActivity',"com.dragonforest.test.dragonwebview.ErrorTestActivity");
+        console.log("正在调试：gotoError（）");
+    }
+
+    function showAlert() {
+        DragonWebInterface.forwardWebAction('showAlert',"你正在访问不安全网站！！");
+        console.log("正在调试：showAlert（）");
+    }
+
+
+</script>
+</body>
+</html>
